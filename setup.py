@@ -8,6 +8,6 @@ setup(name='pds_ppi_helper',
       author_email='cdha@umich.edu',
       license='GNU',
       packages=find_packages(),
-      python requires='>=3.6',
+      python_requires='>=3.6',
       zip_safe=True # this may not be optimal? unclear
 )
