@@ -9,7 +9,7 @@ functions
 """
 
 
-import os
+from time import sleep
 import requests
 import json
 import pandas as pd
@@ -21,8 +21,10 @@ PDS_URL = 'https://pds-ppi.igpp.ucla.edu/'
 
 class SearchResults():
     """Gives the results of a search and metadata about the search.
+    Sleeps first in order to be polite to NASA PDS. :D
     """
     def __init__(self,query:str):
+        sleep(2)
         r = requests.get(PDS_URL + query)
         search_results_json = json.loads(r.content)
         search_results = pd.DataFrame(search_results_json['response']['docs'])
