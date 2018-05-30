@@ -1,3 +1,7 @@
+# pds-ppi-helper<a id="sec-1" name="sec-1"></a>
+This is a helpful python package for interfacing with the Planetary Plasma Interactions node on NASA's Planetary Data System ([PDS-PPI](https://pds-ppi.igpp.ucla.edu/))! Our goals are to create a useful python package to navigate through the PPI PDS site and inform users of both download and exploration capability.
+
+
 <div id="table-of-contents">
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents">
@@ -16,10 +20,6 @@
 </div>
 </div>
 
-# pds-ppi-helper<a id="sec-1" name="sec-1"></a>
-
-A helpful python package for interfacing with the Planetary Plasma Interactions node on NASA's Planetary Data System ([PDS-PPI](https://pds-ppi.igpp.ucla.edu/))!
-
 ## Installation<a id="sec-1-1" name="sec-1-1"></a>
 
 1.  Download or clone this repository.
@@ -37,3 +37,8 @@ A helpful python package for interfacing with the Planetary Plasma Interactions 
     
     print('Found {} results!'.format(my_search.numfound))
     print(my_search.results)
+    
+Last update 5/30/2018
+
+# License
+This repository is liscensed under [GNU General Public License v3.0](https://www.gnu.org/licenses/gpl-3.0.en.html). This work is not affiliated or supported by NASA and we do not make a guarantee of the accuracy of data or tools for scientific or research purposes. 
