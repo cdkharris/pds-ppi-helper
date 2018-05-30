@@ -40,5 +40,5 @@ This is a helpful python package for interfacing with the Planetary Plasma Inter
     
 Last update 5/30/2018
 
-# License
+## License
 This repository is liscensed under [GNU General Public License v3.0](https://www.gnu.org/licenses/gpl-3.0.en.html). This work is not affiliated or supported by NASA and we do not make a guarantee of the accuracy of data or tools for scientific or research purposes. 
