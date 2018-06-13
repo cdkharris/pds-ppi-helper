@@ -73,6 +73,48 @@ Which returns:
 
 So we searched for high-resolution datasets about Europa, and we found a dataset which contains Magnetometer data from flybys of the Galilean moons.
 
+### Get a dataset
+
+We can use search results to find even more information about a given dataset.
+
+The unique id of a dataset in the search results can be accessed with:
+
+    print(my_search.results.iloc[2]['id'])
+
+Which should return:
+
+    GO-J-MAG-3-RDR-HIGHRES-V1.0
+
+We can then get all available metadata about the dataset with:
+
+    my_dataset = pds.get_dataset(my_search.results.iloc[2]['id'])
+
+We can describe this dataset with:
+
+    my_dataset.describe()
+
+Which should return:
+
+    Galileo Orbiter Jupiter MAG High-Res. Magnetic-Field Data
+    
+    This data set contains the Galileo Orbiter Jupiter MAG
+    High-Res. Magnetic-Field Data High resolution &#40;1/3 sec&#41; Galileo
+    Magnetometer data and browse plots from the Jovian satellite flybys
+    &#40;Io, Europa, Ganymede, Callisto, and Amalthea&#41; and other points of
+    interest in the magnetosphere.
+    
+    For more information, please visit
+    https://pds-ppi.igpp.ucla.edu/search/view/?f=yes&id=pds://PPI/GO-J-MAG-3-RDR-HIGHRES-V1.0
+
+And we can see what kinds of information are now available with:
+
+    my_dataset.dataset.keys()
+
+Which should return:
+
+    dict_keys(['VOLUME_ID', 'AUTHORITY', 'PDS_VERSION', 'description', 'VOLUME_SET_ID', 'id', 'VOLUMES', 'PUBLICATION_DATE', 'MISSION_NAME', 'createDate', 'clickCount', 'active', 'startdate', 'stopdate', 'VOLUME_NAME', 'VOLUME_SET_NAME', 'VOLUME_SERIES_NAME', 'slot', 'updateDate', 'errata', 'certified', 'nssdcaStatus', 'nssdcaLastUpdatedDate', 'nssdcaId', 'size', 'archiveStatus', 'archiveType', 'INSTRUMENT_TYPE', 'DATA_SET_ID', 'INSTRUMENT_NAME', 'TARGET_NAME', 'keyword', 'SPACECRAFT_NAME', 'INSTRUMENT_ID'])
+
+
 ## License
 This repository is licensed under [GNU General Public License v3.0](https://www.gnu.org/licenses/gpl-3.0.en.html).
 This work is not affiliated or supported by NASA and we do not make a guarantee of the accuracy of data or tools for scientific or research purposes.
